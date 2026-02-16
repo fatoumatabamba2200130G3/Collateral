@@ -21,7 +21,10 @@
     </div>
 
     <nav class="navbar">
-      <ul>
+      <div class="menu-toggle" id="menu-toggle">
+        ☰
+      </div>
+      <ul id="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#artists">Artistes</a></li>
         <li><a href="#studio">Le Studio</a></li>
@@ -88,8 +91,8 @@
     <img src="images/fassadestudio2.jpeg" class="studio-img" alt="Photo du studio">
     <img src="images/interieurstudio1.jpeg" class="studio-img" alt="Photo du studio">
     <img src="images/interieurstudio2.jpeg" class="studio-img" alt="Photo du studio">
-    <img src="images/images/interieurstudio3.jpeg" class="studio-img" alt="Photo du studio">
-    <img src="images/images/interieurstudio4.jpeg" class="studio-img" alt="Photo du studio">
+    <img src="images/interieurstudio3.jpeg" class="studio-img" alt="Photo du studio">
+    <img src="images/interieurstudio4.jpeg" class="studio-img" alt="Photo du studio">
     </div>
   </section>
 
@@ -239,8 +242,13 @@
   </footer>
 
   
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
 
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
 </body>
 </html>
-
-
