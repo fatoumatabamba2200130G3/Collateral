@@ -460,50 +460,96 @@ body {
 }
 
 
+/* Bouton desktop normal */
+.reserve-desktop {
+  color: #e6e6e6;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.reserve-desktop:hover {
+  color: #d4af37;
+}
+
+/* Ligne mobile cachée sur desktop */
+.nav-mobile {
+  display: none;
+}
+
 
 
 
 /* Icône hamburger (mobile uniquement) */
 .menu-toggle {
   display: none;
-  font-size: 26px;
-  color: #d4af37; /* Barres dorées */
+  font-size: 24px;
+  color: #d4af37;
   cursor: pointer;
-  padding: 8px 12px;
-  border: 2px solid #d4af37; /* Cadre doré */
-  border-radius: 6px; /* Coins légèrement arrondis */
+  padding: 6px 10px;
+  border: 2px solid #d4af37;
+  border-radius: 6px;
 }
 
 /* Mode mobile */
 @media (max-width: 768px) {
 
+  /* Ligne mobile visible */
+  .nav-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+  }
+
+  /* Bouton mobile style “Espace Élève” */
+  .reserve-mobile {
+    background: #f2f2f2;
+    color: #0d0d0d !important;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .reserve-mobile:hover {
+    background: #e4e4e4;
+  }
+
+  /* Hamburger visible */
   .menu-toggle {
     display: block;
-    margin-left: auto;
   }
 
-  .navbar ul {
-    display: none; /* caché par défaut */
+  /* Cacher le bouton desktop */
+  .reserve-desktop {
+    display: none;
+  }
+
+  /* Menu caché par défaut */
+  #nav-links {
+    display: none;
     flex-direction: column;
-    background: rgba(13,13,13,0.95);
+    background: rgba(13,13,13,0.97);
     width: 100%;
-    padding: 15px 0;
-    border-top: 1px solid rgba(212,175,55,0.2);
+    padding: 12px 0;
+    border-top: 1px solid rgba(212,175,55,0.25);
   }
 
-  .navbar ul.show {
-    display: flex; /* affiché quand on clique */
+  /* Menu visible quand on clique */
+  #nav-links.show {
+    display: flex;
   }
 
-  .navbar li {
-    margin: 10px 0;
+  #nav-links li {
     text-align: center;
+    margin: 8px 0;
   }
 
-  .navbar a {
-    font-size: 16px;
-    padding: 10px 0;
+  #nav-links a {
     display: block;
+    padding: 6px 0;
+    font-size: 16px;
   }
 }
-
