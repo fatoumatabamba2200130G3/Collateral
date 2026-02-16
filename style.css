@@ -507,9 +507,9 @@ body {
   }
 
   /* Bouton mobile style VS Code */
- .reserve-mobile {
-  background: transparent;        /* pas de fond */
-  color: #ffffff !important;      /* texte en blanc */
+.reserve-mobile {
+  background: transparent;        
+  color: #ffffff !important;      /* texte blanc */
   padding: 8px 16px;
   border: 2px solid #007ACC;      /* bleu VS Code */
   border-radius: 999px;           /* arrondi pill */
@@ -524,10 +524,19 @@ body {
   }
 
   /* Hamburger visible */
-  .menu-toggle {
-    display: flex; /* carré visible */
-    margin-left: auto;
-  }
+.menu-toggle {
+  display: flex;
+  width: 36px;              /* carré */
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;          /* taille des barres */
+  color: #d4af37;
+  cursor: pointer;
+  border: 2px solid #d4af37;
+  border-radius: 6px;       /* arrondi léger */
+  box-sizing: border-box;
+}
 
   /* Cacher le bouton desktop */
   .reserve-desktop {
@@ -559,4 +568,3 @@ body {
     font-size: 16px;
   }
 }
-
