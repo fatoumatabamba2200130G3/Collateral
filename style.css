@@ -466,10 +466,12 @@ body {
 /* Icône hamburger (mobile uniquement) */
 .menu-toggle {
   display: none;
-  font-size: 28px;
-  color: #e6e6e6;
+  font-size: 26px;
+  color: #d4af37; /* Barres dorées */
   cursor: pointer;
-  padding: 10px;
+  padding: 8px 12px;
+  border: 2px solid #d4af37; /* Cadre doré */
+  border-radius: 6px; /* Coins légèrement arrondis */
 }
 
 /* Mode mobile */
@@ -504,3 +506,4 @@ body {
     display: block;
   }
 }
+
