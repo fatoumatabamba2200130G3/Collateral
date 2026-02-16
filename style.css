@@ -75,6 +75,8 @@ body {
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(212,175,55,0.25);
   padding: 12px 0;
+  /*padding-top: 30px;  espace sous la navbar */
+
 }
 .navbar ul {
   display: flex;
@@ -104,24 +106,6 @@ body {
 
 
 
-@media (max-width: 480px) {
-
-  .navbar ul {
-    flex-wrap: wrap;        /* Permet le retour à la ligne */
-    gap: 10px;              /* Espacement entre les liens */
-    padding: 0 10px;
-  }
-
-  .navbar li {
-    margin: 5px 8px;        /* Réduit l’espace autour des liens */
-  }
-
-  .navbar a,
-  .reserve-btn {
-    font-size: 14px;        /* Texte plus petit pour mobile */
-    padding: 6px 0;         /* Hauteur plus compacte */
-  }
-}
 
 /* -------------------- SECTIONS -------------------- */
 .section-box {
@@ -473,4 +457,50 @@ body {
 
 .reserve-btn:hover {
   color: #d4af37;
+}
+
+
+
+
+
+/* Icône hamburger (mobile uniquement) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #e6e6e6;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Mode mobile */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .navbar ul {
+    display: none; /* caché par défaut */
+    flex-direction: column;
+    background: rgba(13,13,13,0.95);
+    width: 100%;
+    padding: 15px 0;
+    border-top: 1px solid rgba(212,175,55,0.2);
+  }
+
+  .navbar ul.show {
+    display: flex; /* affiché quand on clique */
+  }
+
+  .navbar li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .navbar a {
+    font-size: 16px;
+    padding: 10px 0;
+    display: block;
+  }
 }
