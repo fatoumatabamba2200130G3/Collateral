@@ -507,17 +507,17 @@ body {
   }
 
   /* Bouton mobile style VS Code */
-  .reserve-mobile {
-    background: transparent;        /* pas de fond */
-    color: #0d0d0d !important;
-    padding: 6px 14px;
-    border: 2px solid #007ACC;      /* bleu VS Code */
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 14px;
-    text-decoration: none;
-    white-space: nowrap;
-  }
+ .reserve-mobile {
+  background: transparent;        /* pas de fond */
+  color: #ffffff !important;      /* texte en blanc */
+  padding: 8px 16px;
+  border: 2px solid #007ACC;      /* bleu VS Code */
+  border-radius: 999px;           /* arrondi pill */
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+}
 
   .reserve-mobile:hover {
     background: rgba(0,122,204,0.1); /* léger effet au survol */
@@ -559,3 +559,4 @@ body {
     font-size: 16px;
   }
 }
+
