@@ -480,33 +480,39 @@ body {
 
 
 /* Icône hamburger (mobile uniquement) */
+/* Hamburger doré encadré carré */
 .menu-toggle {
   display: none;
-  font-size: 24px;
+  font-size: 20px;          /* taille des barres */
   color: #d4af37;
   cursor: pointer;
-  padding: 6px 10px;
+  width: 40px;              /* largeur fixe */
+  height: 40px;             /* hauteur fixe → carré */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 2px solid #d4af37;
-  border-radius: 6px;
+  border-radius: 6px;       /* arrondi léger */
+  box-sizing: border-box;
 }
 
-/* Mode mobile */
+/* Mobile */
 @media (max-width: 768px) {
 
-  /* Ligne mobile visible */
   .nav-mobile {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* bouton gauche / hamburger droite */
     align-items: center;
-    padding: 12px 15px;
+    padding: 8px 12px;              /* réduit l’épaisseur de la navbar */
   }
 
-  /* Bouton mobile style “Espace Élève” */
+  /* Bouton mobile style VS Code */
   .reserve-mobile {
-    background: #f2f2f2;
+    background: transparent;        /* pas de fond */
     color: #0d0d0d !important;
-    padding: 8px 16px;
-    border-radius: 999px;
+    padding: 6px 14px;
+    border: 2px solid #007ACC;      /* bleu VS Code */
+    border-radius: 6px;
     font-weight: 600;
     font-size: 14px;
     text-decoration: none;
@@ -514,12 +520,13 @@ body {
   }
 
   .reserve-mobile:hover {
-    background: #e4e4e4;
+    background: rgba(0,122,204,0.1); /* léger effet au survol */
   }
 
   /* Hamburger visible */
   .menu-toggle {
-    display: block;
+    display: flex; /* carré visible */
+    margin-left: auto;
   }
 
   /* Cacher le bouton desktop */
@@ -537,7 +544,6 @@ body {
     border-top: 1px solid rgba(212,175,55,0.25);
   }
 
-  /* Menu visible quand on clique */
   #nav-links.show {
     display: flex;
   }
