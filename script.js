@@ -138,3 +138,14 @@ function toggleMenu() {
     const menu = document.getElementById("mobileMenu");
     menu.classList.toggle("active");
 }
+
+
+// Sélectionner le hamburger et le menu
+const toggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+// Quand on clique sur le hamburger
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');   // ouvre/ferme le menu
+  toggle.classList.toggle('active');     // anime le hamburger (barres → croix)
+});
