@@ -507,25 +507,31 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
 /* Mobile */
 @media (max-width: 768px) {
-
+  
+  /* Hamburger visible */
   .nav-mobile {
     display: flex;
     justify-content: space-between; /* bouton gauche / hamburger droite */
     align-items: center;
     padding: 10px 15px;              /* epaisseur de la navbar */
   }
-  /* Hamburger visible */
-.nav-mobile {
-    display: flex;
-    justify-content: space-between;
+.hamburger {
+    width: 60px;
+    height: 50px;
+    border: 3px solid #d4af37;
+    border-radius: 15px;
+    display: flex; /* visible sur mobile */
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 8px 12px;
-  }
-
-  .hamburger {
-    display: flex;   /* visible sur mobile */
-  }
-
+    gap: 6px;
+    cursor: pointer;
+}
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #d4af37;
+}
   #nav-links {
     display: none;   /* menu caché au départ */
     position: absolute;
@@ -542,10 +548,10 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
  #nav-links a {
-    display: block;
+    /*display: block;
     color: white;
     text-decoration: none;
-    text-align: left;
+    text-align: left;*/
     margin: 10px 0;
   }
 .hero-content {
