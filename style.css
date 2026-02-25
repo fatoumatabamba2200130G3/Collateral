@@ -526,12 +526,16 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   #nav-links {
     display: none;   /* menu caché au départ */
     position: absolute;
-    top: 70px;
+    top: 100%;
     right: 20px;
     background: #111;
-    padding: 15px;
+    padding: 15px 0;
     border-radius: 10px;
-    width: 200px;
+    width: 100%;
+
+    flex-direction: column;
+    left: 0;
+    z-index: 2000;
   }
 
   #nav-links.active {
@@ -555,6 +559,10 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     width: 100%;
     max-width: 260px;
     margin: 8px 0;
+  }
+  .navbar {
+    position: relative; /* important pour que absolute fonctionne correctement */
+    z-index: 1000;
   }
 
  
@@ -601,4 +609,5 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   color: white;
   font-size: 20px;
 }
+
 
