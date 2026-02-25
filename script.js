@@ -1,14 +1,14 @@
 // ----------------------
-// 1. Menu mobile animé
+// 1. MENU MOBILE
 // ----------------------
+
 const toggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
 
 toggle.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-  toggle.classList.toggle('active'); // animation hamburger
+  navLinks.classList.toggle('active'); // correspond au CSS
+  toggle.classList.toggle('active');   // animation burger
 });
-
 // ----------------------
 // 2. Effet de scroll reveal
 // ----------------------
@@ -134,18 +134,4 @@ document.querySelectorAll('.session-card').forEach(card => {
   }, 500);
 });
 
-function toggleMenu() {
-    const menu = document.getElementById("mobileMenu");
-    menu.classList.toggle("active");
-}
 
-
-// Sélectionner le hamburger et le menu
-const toggle = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
-
-// Quand on clique sur le hamburger
-toggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');   // ouvre/ferme le menu
-  toggle.classList.toggle('active');     // anime le hamburger (barres → croix)
-});
